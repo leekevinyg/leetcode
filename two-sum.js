@@ -12,4 +12,5 @@ var twoSum = function(nums, target) {
             }
         }
     }
+    throw 'no 2 sum possible'
 };
