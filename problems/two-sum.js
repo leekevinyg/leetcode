@@ -1,7 +1,15 @@
 /**
+ * 
+ * Given an array of nums and a target, this function will return the indicies that add
+ * up to the target.
+ * 
  * @param {number[]} nums
  * @param {number} target
  * @return {number[]}
+ * 
+ * Time Complexity: O(n)
+ * Space Complexity: O(n)
+ * 
  */
 
 const TwoSum = (nums, target) => {
