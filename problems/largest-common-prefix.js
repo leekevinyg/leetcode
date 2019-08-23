@@ -2,6 +2,9 @@
  * 
  * Given an array of strings, this function will return the largest common prefix
  * 
+ * Time Complexity: O(mn)
+ * 
+ * Where m is the length of the longest string and n is the total number of strings in the strs array
  * @param {string[]} strArray
  * @return {string}
  */
