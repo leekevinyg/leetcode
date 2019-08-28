@@ -1,7 +1,7 @@
 let assert = require('assert');
 let { LongestCommonPrefix, LongestCommonPrefix_DC } = require('../problems/largest-common-prefix');
 
-xdescribe('LargestCommonPrefix', function() {
+describe('LargestCommonPrefix', function() {
     it('should return empty if no common prefix', function() {
         assert.equal(LongestCommonPrefix(["dog", "racecar", "car"]), "");
     });
@@ -15,10 +15,10 @@ xdescribe('LargestCommonPrefix', function() {
 });
 
 describe('LargestCommonPrefix - Divide and Conquer Method', function() {
-    xit('should return empty if no common prefix', function() {
+    it('should return empty if no common prefix', function() {
         assert.equal(LongestCommonPrefix_DC(["dog", "racecar", "car"]), "");
     });
-    xit('should return the word if strArray is of length 1', function() {
+    it('should return the word if strArray is of length 1', function() {
         assert.equal(LongestCommonPrefix_DC(["dog"]), "dog");
     });
     it('should return the largest common prefix', function() {
