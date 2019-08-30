@@ -48,33 +48,33 @@ const LongestCommonPrefix = function(strs) {
  * 
  */
 
-const LCP = (string1, string2) => {
+const LCP = (lcpLeft, lcpRight) => {
     let i = 0;
     let j = 0;
 
-    while (i < string1.length && j < string2.length) {
-        if (string1[i] !== string2[j]) break;
+    while (i < lcpLeft.length && j < lcpRight.length) {
+        if (lcpLeft[i] !== lcpRight[j]) break;
         i++;
         j++;
     }
 
-    return string1.substr(0, i);
+    return lcpLeft.substr(0, i);
 }
 
 const DCHelper = (strArray, low, high) => {
     if (low > high) {
         return '';
     }
-
+    // Only one string left in this iteration, LCP must be itself.
     if (low === high) {
         return strArray[low];
     }
 
     let mid = Math.floor((low + high) / 2);
-    let string1 = DCHelper(strArray, low, mid);
-    let string2 = DCHelper(strArray, mid+1, high);
+    let lcpLeft = DCHelper(strArray, low, mid);
+    let lcpRight = DCHelper(strArray, mid+1, high);
 
-    return LCP(string1, string2);
+    return LCP(lcpLeft, lcpRight);
 }
 
 const LongestCommonPrefix_DC = (strArray) => {

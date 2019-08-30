@@ -22,6 +22,9 @@ describe('LargestCommonPrefix - Divide and Conquer Method', function() {
         assert.equal(LongestCommonPrefix_DC(["dog"]), "dog");
     });
     it('should return the largest common prefix', function() {
+        assert.equal(LongestCommonPrefix_DC(["dog", "do"]), "do");
+        assert.equal(LongestCommonPrefix_DC(["dog", "do", "doggy"]), "do");
+        assert.equal(LongestCommonPrefix_DC(["dog", "do", "doggy", "doode"]), "do");
         assert.equal(LongestCommonPrefix_DC(["a", "ab", "abc"]), "a");
         assert.equal(LongestCommonPrefix_DC(["flower", "flow", "flight"]), "fl");
     });
