@@ -10,7 +10,7 @@
  * @return {string}
  */
 const LongestCommonPrefix = function(strs) {
-    if (strs.length === 0 || strs === null) {
+    if (strs === undefined || strs.length === 0) {
         return '';
     }
 

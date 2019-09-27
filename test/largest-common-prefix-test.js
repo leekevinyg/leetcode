@@ -2,6 +2,9 @@ let assert = require('assert');
 let { LongestCommonPrefix, LongestCommonPrefix_DC } = require('../problems/largest-common-prefix');
 
 describe('LargestCommonPrefix', function() {
+    it('should return empty if passed in input is null', function() {
+        assert.equal(LongestCommonPrefix(), "");
+    });
     it('should return empty if no common prefix', function() {
         assert.equal(LongestCommonPrefix(["dog", "racecar", "car"]), "");
     });
