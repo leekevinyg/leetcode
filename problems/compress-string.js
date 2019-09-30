@@ -9,7 +9,7 @@
  * @return {number}
  * 
  */
-var compressString = function(chars) {
+const compressString = (chars) => {
     let count = 0;
     let output = [];
     for (let i=0; i<chars.length; i++) {
@@ -24,7 +24,6 @@ var compressString = function(chars) {
     }
     return output.length;
 }
- 
 
 module.exports = {
     compressString,
