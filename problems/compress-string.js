@@ -10,9 +10,10 @@
  * 
  */
 const compressString = (chars) => {
-    let count = 0;
+    let count=0;
     let output = [];
     for (let i=0; i<chars.length; i++) {
+        count++;
         if (chars[i] !== chars[i+1]) {
             output.push(chars[i]);
             if (count > 1) {
@@ -20,7 +21,6 @@ const compressString = (chars) => {
             }
             count = 0;
         }
-        count++;
     }
     return output.length;
 }
